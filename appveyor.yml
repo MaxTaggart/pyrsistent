@@ -12,14 +12,6 @@ environment:
     # Pre-installed versions of python. See the Appveyor docs for the most up-to-date list.
     # Wheels are designed to only be specific to major.minor version, the patch version is irrelevant.
 
-    - PYTHON: "C:\\Python26"
-      PYTHON_VERSION: "2.6.x"
-      PYTHON_ARCH: "32"
-
-    - PYTHON: "C:\\Python26-x64"
-      PYTHON_VERSION: "2.6.x"
-      PYTHON_ARCH: "64"
-
     - PYTHON: "C:\\Python27"
       PYTHON_VERSION: "2.7.x"
       PYTHON_ARCH: "32"
