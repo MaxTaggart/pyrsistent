@@ -86,12 +86,12 @@ install:
   - ps: "ls \"C:/Program Files/Microsoft SDKs/Windows\""
 
   # Check that we have the expected version and architecture for Python
-  - "python --version"
-  - "python -c \"import struct; print(struct.calcsize('P') * 8)\""
+  - "$env:Python --version"
+  - "$env:Python -c \"import struct; print(struct.calcsize('P') * 8)\""
 
   # Upgrade to the latest version of pip to avoid it displaying warnings
   # about it being out of date.
-  - "python -m pip install --upgrade pip"
+  - "$env:Python -m pip install --upgrade pip"
 
   # Install the build dependencies of the project. If some dependencies contain
   # compiled extensions and are not provided as pre-built wheel packages,
@@ -102,7 +102,7 @@ install:
 
 build_script:
   # Build the compiled extension
-  - "%CMD_IN_ENV% python setup.py bdist_wheel"
+  - "%CMD_IN_ENV% $env:PYTHON setup.py bdist_wheel"
   
 
 artifacts:
