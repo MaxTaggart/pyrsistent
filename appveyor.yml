@@ -91,7 +91,7 @@ install:
 
   # Upgrade to the latest version of pip to avoid it displaying warnings
   # about it being out of date.
-  - "\"%PYTHON%/python.exe\" -m pip install --upgrade pip"
+  - "\"%PYTHON%/Scripts/pip.exe\" install --upgrade pip"
 
   # Install the build dependencies of the project. If some dependencies contain
   # compiled extensions and are not provided as pre-built wheel packages,
