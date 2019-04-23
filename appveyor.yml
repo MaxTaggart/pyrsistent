@@ -96,7 +96,7 @@ install:
 
 build_script:
   # Build the compiled extension
-  - "%CMD_IN_ENV% \"%PYTHON%/python.exe\" ./setup.py bdist_wheel"
+  - "%CMD_IN_ENV% \"%PYTHON%/python.exe\" .\setup.py bdist_wheel"
   
 
 artifacts:
